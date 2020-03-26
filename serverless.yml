@@ -1,0 +1,19 @@
+service: cognito-backend
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  hello:
+    handler: handler.people
+    events:
+      - http:
+          path: people
+          method: get
+          cors: true
+          integration: lambda
+          authorizer:
+            arn: arn:aws:cognito-idp:us-east-1:930170203968:userpool/us-east-1_WA9ZRj8Z8
+            claims:
+              - email
