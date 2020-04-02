@@ -14,6 +14,6 @@ functions:
           cors: true
           integration: lambda
           authorizer:
-            arn: arn:aws:cognito-idp:xx-xxxxx-n:nnnnnnnnnn:userpool/xx-xxxx-n_xxxxxxx
+            arn: arn:aws:cognito-idp:xx-xxxxx-n:nnnnnnnnnn:userpool/xx-xxxx-n_xxxxxxx #replace with your cognito user pool's ARN
             claims:
               - email
