@@ -13,3 +13,7 @@ functions:
           method: get
           cors: true
           integration: lambda
+          authorizer:
+            arn: arn:aws:cognito-idp:xx-xxxxx-n:nnnnnnnnnn:userpool/xx-xxxx-n_xxxxxxx
+            claims:
+              - email
